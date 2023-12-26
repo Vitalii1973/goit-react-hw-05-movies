@@ -1,0 +1,64 @@
+.homeContainer {
+  border-bottom: 1px solid #e7e9fc;
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  margin-bottom: 24px;
+  background: linear-gradient(to right, var(--colors));
+  background-size: 200% 100%;
+  animation: gradientAnimation 20s infinite linear;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    --colors: violet, indigo, blue, green, yellow, orange, red;
+    background-position: 0% 0%;
+  }
+
+  100% {
+    --colors: red, orange, yellow, green, blue, indigo, violet;
+    background-position: 100% 100%;
+  }
+}
+
+.homeNav {
+  display: flex;
+  align-items: center;
+}
+
+.homeLogo {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 800;
+  font-size: 38px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 24px 0;
+  margin-right: 300px;
+  background-image: linear-gradient(to right, rgb(196, 173, 236), rgb(240, 23, 218), rgb(0, 251, 255), green, yellow, orange, red);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  display: inline-block;
+  transition: background-position 0.5s ease, color 0.5s ease;
+}
+
+.homeList {
+  display: flex;
+  gap: 40px;
+}
+
+.homeLink {
+  font-weight: 700;
+  color: #fefefc;
+  padding: 12px 0;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.homeLink:hover,
+.homeLink:focus {
+  color: #ef0d0d;
+}
